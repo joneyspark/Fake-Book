@@ -15,6 +15,10 @@ app.use(cors());
 app.use('/posts', postRoute);
 app.use('/users', userRoute);
 
+app.get('/', (req, res) => {
+    res.send("APP is Running");
+})
+
 // Mongo DB configuration
 
 const CONNECTION_URL = process.env.CONNECTION_URL
